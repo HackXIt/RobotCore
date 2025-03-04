@@ -4,9 +4,9 @@ namespace RobotCore.StandaloneServer;
 
 public class ExampleLibrary
 {
-    public string WriteString(string text)
+    public string WriteString(string text, int year)
     {
-        Trace.WriteLine(text);
+        Trace.WriteLine($"WriteString: {text} {year}");
         return text;
     }
 }

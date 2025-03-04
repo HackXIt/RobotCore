@@ -41,8 +41,7 @@ internal class Program
             .Build();
         // Add libraries
         var remoteLibrary = host.Services.GetRequiredService<IKeywordManager>();
-        var type = typeof(ExampleLibrary);
-        remoteLibrary.AddLibrary(type.Assembly., type.FullName);
+        remoteLibrary.AddLibrary(new ExampleLibrary());
         
         // "host.Services" now has an NLog-based ILogger<T>.
         var service = host.Services.GetRequiredService<HttpService>();

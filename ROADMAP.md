@@ -1,62 +1,62 @@
 # RobotCore Project Roadmap
 
 ## Usages
-- [ ] Programmatic Usage (i.e. RemoteServer used as library in your application / runtime)
+- [x] Programmatic Usage (i.e. RemoteServer used as library in your application / runtime)
 - [ ] Service inside ASP.NET (i.e. RemoteServer added as service to your ASP.NET server)
-- [ ] Standalone Server (i.e. You launch the default RemoteServer executable)
+- [x] Standalone Server (i.e. You launch the default RemoteServer executable)
 - [ ] Dependency (i.e. You add the RemoteServer as NuGet package)
 ## Server Information
 - [ ] Status Page informing about loaded libraries and their keywords
 - [ ] Robot Framework Library Documentation Format for each loaded Library
 ## Type conversion support
 - [ ] Robot Framework => RemoteServer _(i.e. serialized parameters from RF)_
-  - [ ] General type support for parameters in keyword methods _(all RF-supportable standard types of C# should be usable in keyword methods)_
+  - [x] General type support for parameters in keyword methods _(all RF-supportable standard types of C# should be usable in keyword methods)_
   - [ ] Python type conversions to parameter type of keyword method
     - [ ] Regular python types
-      - [ ] `None`
-      - [ ] `string`
-      - [ ] `int`
-      - [ ] `float`
-      - [ ] `bool`
+      - [x] `None`
+      - [x] `string`
+      - [x] `int`
+      - [x] `float`
+      - [x] `bool`
     - [ ] Special types
-      - [ ] `list, tuple`
-        - [ ] Handle regular python element types _(listed above)_
-        - [ ] Handle nested `list, tuple`
-        - [ ] Handle nested `dict`
+      - [x] `list, tuple`
+        - [x] Handle regular python element types _(listed above)_
+        - [x] Handle nested `list, tuple`
+        - [x] Handle nested `dict`
         - [ ] _other special cases to consider to be added here_
-      - [ ] `dict`
-        - [ ] Handle regular python value types _(listed above)_
-        - [ ] Handle text keys (`string`)
+      - [x] `dict`
+        - [x] Handle regular python value types _(listed above)_
+        - [x] Handle text keys (`string`)
         - [ ] Handle numeric keys (`int`, `float`)
         - [ ] Handle `object` keys
         - [ ] _other special cases to consider to be added here_
 - [ ] RemoteServer => Robot Framework _(i.e. return values serialized to RF)_
   - [ ] special types
     - [ ] `null`
-    - [ ] `void`
+    - [x] `void`
     - [ ] `dynamic`
     - [ ] `object`
     - [ ] `DateTime`
     - [ ] `enum`
   - [ ] Symbol types
     - [ ] `char`
-    - [ ] `string`
+    - [x] `string`
   - [ ] numeric types
-    - [ ] `int`
+    - [x] `int`
     - [ ] `uint`
     - [ ] `short`
     - [ ] `ushort`
-    - [ ] `float`
-    - [ ] `double`
+    - [x] `float`
+    - [x] `double`
     - [ ] `decimal`
     - [ ] `ulong`
     - [ ] `byte`
     - [ ] `sbyte`
   - [ ] collection types
     - [ ] based on `IList` or `ICollection`
-        - [ ] `Array`
+        - [x] `Array`
         - [ ] `ArrayList`
-        - [ ] `List<T>`
+        - [x] `List<T>`
         - [ ] `Queue`
         - [ ] `ConcurrentQueue<T>`
         - [ ] `LinkedList<T>`
@@ -64,41 +64,42 @@
       - [ ] `Hashtable`
       - [ ] `SortedList`
       - [ ] `SortedList<TKey, TValue>`
+      - [x] `Dictionary<string, TValue>`
       - [ ] `Dictionary<TKey, TValue>`
       - [ ] `ConcurrentDictionary<TKey, TValue>`
 ## Library types
 - [ ] Static API Library
-- [ ] Dynamic API Library
+- [x] Dynamic API Library
 ## Remote Server Communication Features
-- [ ] PASS
-- [ ] FAIL
-- [ ] CONTINUABLE
-- [ ] FATAL
-- [ ] Exceptions
-  - [ ] Traceback
-- [ ] Logging
-- [ ] Finding keywords
+- [x] PASS
+- [x] FAIL
+- [x] CONTINUABLE
+- [x] FATAL
+- [x] Exceptions
+  - [x] Traceback
+- [x] Logging
+- [x] Finding keywords
 ## Remote Server Library Features
-- [ ] Library Attributes
-- [ ] Keyword Attributes
-- [ ] Support positional arguments
-- [ ] Support kwargs
+- [x] Library Attributes
+- [x] Keyword Attributes
+- [x] Support positional arguments
+- [x] Support kwargs
 - [ ] Support variable arguments
 - [ ] Support method overloading
 - [ ] Support library class inheritance
-- [ ] Support keyword documentation
-- [ ] Support keyword tags
-- [ ] Support code documentation
+- [x] Support keyword documentation
+- [x] Support keyword tags
+- [x] Support code documentation
 ## Remote Server Protocol _(XML-RPC)_
-- [ ] Data type serialization
-- [ ] Robot Framework Remote-Library-Interface specification
-  - [ ] `run_keyword()`
-  - [ ] `get_keyword_names`
-  - [ ] `get_keyword_arguments`
-  - [ ] `get_keyword_types`
-  - [ ] `get_keyword_tags`
-  - [ ] `get_keyword_documentation`
-  - [ ] `get_library_information`
+- [x] Data type serialization
+- [x] Robot Framework Remote-Library-Interface specification
+  - [x] `run_keyword()`
+  - [x] `get_keyword_names`
+  - [x] `get_keyword_arguments`
+  - [x] `get_keyword_types`
+  - [x] `get_keyword_tags`
+  - [x] `get_keyword_documentation`
+  - [x] `get_library_information`
 
 ## Remote Server Control
 
@@ -107,8 +108,8 @@
   - [ ] Stop server
 - [ ] Controls in C#
   - [ ] Configure start / stop functionality _(Allow)_
-  - [ ] Configure port _(i.e. usage method in C# allows setting a server port)_
-  - [ ] Configure logging
+  - [x] Configure port _(i.e. usage method in C# allows setting a server port)_
+  - [x] Configure logging
 ## CI/CD
 - [ ] Merging strategy
 - [ ] Dependency management
@@ -142,7 +143,7 @@
   - [ ] Traceback
   - [ ] Keyword status _(PASS, FAIL, ...)_
 - [ ] Verify Static Library features
-- [ ] Verify Dynamic Library features
+- [x] Verify Dynamic Library features
 ## Documentation
 - [ ] Code structure
 - [ ] Architecture
@@ -169,8 +170,8 @@
 - [ ] Dependency management
 - [ ] Refactor cycles
 ## Development support
-- [ ] Sponsoring (recurring)
-- [ ] Sponsoring (single-donation)
+- [x] Sponsoring (recurring)
+- [x] Sponsoring (single-donation)
 ## Licensing
 - [ ] Robot Framework Logo Usage?
 - [ ] Appropriate copyright?
@@ -179,6 +180,7 @@
 - [ ] Project Logo
 - [ ] README
 - [ ] Repository tags
-- [ ] RoboCon 2025 Material
-  - [ ] Presentation slides
+- [x] RoboCon 2025 Material
+  - [x] Presentation slides
   - [ ] Hosted Live Demo Server
+  - [ ] DevContainer for VSCode

@@ -1,0 +1,122 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dotfiles", "dotfiles", "{D8A9FEFD-C1A8-4AB2-9EAC-C06B452494F3}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotCore.Library", "RobotCore.Library\RobotCore.Library.csproj", "{5272A4EB-6750-4AB9-9BCA-9DA3A1DD01F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotCore.Service", "RobotCore.Service\RobotCore.Service.csproj", "{D4BEFA82-59B4-4E0F-A6D7-16EE17B519AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotCore.StandaloneServer", "RobotCore.StandaloneServer\RobotCore.StandaloneServer.csproj", "{5E1638CA-CA02-480C-A408-F61675CA2967}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotCore.XmlRpcService", "RobotCore.XmlRpcService\RobotCore.XmlRpcService.csproj", "{36D93967-889E-483F-9ADB-7A5418092579}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{AA465361-D12D-4E82-A21C-57A9788506F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "robotframework-acceptance", "robotframework-acceptance", "{B70B1DA3-B1A3-40EC-9267-FA9E3D760272}"
+	ProjectSection(SolutionItems) = preProject
+		test\robotframework\acceptance\__init__.robot = test\robotframework\acceptance\__init__.robot
+		test\robotframework\acceptance\acceptance.resource = test\robotframework\acceptance\acceptance.resource
+		test\robotframework\acceptance\argument_counts.robot = test\robotframework\acceptance\argument_counts.robot
+		test\robotframework\acceptance\argument_types.robot = test\robotframework\acceptance\argument_types.robot
+		test\robotframework\acceptance\basic_communication.robot = test\robotframework\acceptance\basic_communication.robot
+		test\robotframework\acceptance\failures.robot = test\robotframework\acceptance\failures.robot
+		test\robotframework\acceptance\finding_keywords.robot = test\robotframework\acceptance\finding_keywords.robot
+		test\robotframework\acceptance\invalid_arguments_counts.robot = test\robotframework\acceptance\invalid_arguments_counts.robot
+		test\robotframework\acceptance\kwargs.robot = test\robotframework\acceptance\kwargs.robot
+		test\robotframework\acceptance\logging.robot = test\robotframework\acceptance\logging.robot
+		test\robotframework\acceptance\ProxyableRemote.py = test\robotframework\acceptance\ProxyableRemote.py
+		test\robotframework\acceptance\return_values.robot = test\robotframework\acceptance\return_values.robot
+		test\robotframework\acceptance\traceback.robot = test\robotframework\acceptance\traceback.robot
+		test\robotframework\acceptance\variables.py = test\robotframework\acceptance\variables.py
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "robotframework-example-lib", "robotframework-example-lib", "{09B5F6E3-CE9F-463D-822A-F88B6EBCA60E}"
+	ProjectSection(SolutionItems) = preProject
+		test\robotframework\example-lib\__init__.robot = test\robotframework\example-lib\__init__.robot
+		test\robotframework\example-lib\example-lib.resource = test\robotframework\example-lib\example-lib.resource
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test-robotcore", "test-robotcore", "{A6892742-7327-4806-87D2-B1C825EDD623}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{02EFCF14-EA4D-4B94-A0A5-DC2D7B23DEBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleLibrary", "examples\SimpleLibrary\SimpleLibrary.csproj", "{A8AC845D-FDF4-402A-94CE-0B2B4CF79A00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleServer", "examples\SimpleServer\SimpleServer.csproj", "{C09EEC96-DB57-4A82-8B09-B0C36F2D5BF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakeMultiplayer", "examples\SnakeMultiplayer\SnakeMultiplayer.csproj", "{BBC37E56-BC40-4113-AA9F-006A8A5231E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotCore.Library.Tests", "test\robotcore\RobotCore.Library.Tests\RobotCore.Library.Tests.csproj", "{3F4DE9D5-8A43-426B-913F-EC6960854CB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotCore.Standalone.Tests", "test\robotcore\RobotCore.Standalone.Tests\RobotCore.Standalone.Tests.csproj", "{E6AC8341-B050-4D88-9317-CC71B44386E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotCore.Standalone.TestsLibrary", "test\robotcore\RobotCore.Standalone.TestsLibrary\RobotCore.Standalone.TestsLibrary.csproj", "{603F98B0-5C88-4476-AB13-F067DF2E5EF8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5272A4EB-6750-4AB9-9BCA-9DA3A1DD01F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5272A4EB-6750-4AB9-9BCA-9DA3A1DD01F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5272A4EB-6750-4AB9-9BCA-9DA3A1DD01F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5272A4EB-6750-4AB9-9BCA-9DA3A1DD01F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4BEFA82-59B4-4E0F-A6D7-16EE17B519AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4BEFA82-59B4-4E0F-A6D7-16EE17B519AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4BEFA82-59B4-4E0F-A6D7-16EE17B519AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4BEFA82-59B4-4E0F-A6D7-16EE17B519AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E1638CA-CA02-480C-A408-F61675CA2967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E1638CA-CA02-480C-A408-F61675CA2967}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E1638CA-CA02-480C-A408-F61675CA2967}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E1638CA-CA02-480C-A408-F61675CA2967}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36D93967-889E-483F-9ADB-7A5418092579}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36D93967-889E-483F-9ADB-7A5418092579}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36D93967-889E-483F-9ADB-7A5418092579}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36D93967-889E-483F-9ADB-7A5418092579}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8AC845D-FDF4-402A-94CE-0B2B4CF79A00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8AC845D-FDF4-402A-94CE-0B2B4CF79A00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8AC845D-FDF4-402A-94CE-0B2B4CF79A00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8AC845D-FDF4-402A-94CE-0B2B4CF79A00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C09EEC96-DB57-4A82-8B09-B0C36F2D5BF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C09EEC96-DB57-4A82-8B09-B0C36F2D5BF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C09EEC96-DB57-4A82-8B09-B0C36F2D5BF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C09EEC96-DB57-4A82-8B09-B0C36F2D5BF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBC37E56-BC40-4113-AA9F-006A8A5231E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBC37E56-BC40-4113-AA9F-006A8A5231E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBC37E56-BC40-4113-AA9F-006A8A5231E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBC37E56-BC40-4113-AA9F-006A8A5231E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F4DE9D5-8A43-426B-913F-EC6960854CB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F4DE9D5-8A43-426B-913F-EC6960854CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F4DE9D5-8A43-426B-913F-EC6960854CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F4DE9D5-8A43-426B-913F-EC6960854CB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6AC8341-B050-4D88-9317-CC71B44386E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6AC8341-B050-4D88-9317-CC71B44386E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6AC8341-B050-4D88-9317-CC71B44386E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6AC8341-B050-4D88-9317-CC71B44386E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{603F98B0-5C88-4476-AB13-F067DF2E5EF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{603F98B0-5C88-4476-AB13-F067DF2E5EF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{603F98B0-5C88-4476-AB13-F067DF2E5EF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{603F98B0-5C88-4476-AB13-F067DF2E5EF8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B70B1DA3-B1A3-40EC-9267-FA9E3D760272} = {AA465361-D12D-4E82-A21C-57A9788506F3}
+		{09B5F6E3-CE9F-463D-822A-F88B6EBCA60E} = {AA465361-D12D-4E82-A21C-57A9788506F3}
+		{A6892742-7327-4806-87D2-B1C825EDD623} = {AA465361-D12D-4E82-A21C-57A9788506F3}
+		{A8AC845D-FDF4-402A-94CE-0B2B4CF79A00} = {02EFCF14-EA4D-4B94-A0A5-DC2D7B23DEBB}
+		{C09EEC96-DB57-4A82-8B09-B0C36F2D5BF7} = {02EFCF14-EA4D-4B94-A0A5-DC2D7B23DEBB}
+		{BBC37E56-BC40-4113-AA9F-006A8A5231E0} = {02EFCF14-EA4D-4B94-A0A5-DC2D7B23DEBB}
+		{3F4DE9D5-8A43-426B-913F-EC6960854CB1} = {A6892742-7327-4806-87D2-B1C825EDD623}
+		{E6AC8341-B050-4D88-9317-CC71B44386E2} = {A6892742-7327-4806-87D2-B1C825EDD623}
+		{603F98B0-5C88-4476-AB13-F067DF2E5EF8} = {A6892742-7327-4806-87D2-B1C825EDD623}
+	EndGlobalSection
+EndGlobal

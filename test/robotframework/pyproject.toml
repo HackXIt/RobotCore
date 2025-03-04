@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "robotcore-testing"
+version = "0.0.1"
+description = "Testing of RobotCore implementation via usage in Robot Framework"
+authors = ["Nikolaus Rieder <dev@hackxit.com>"]
+readme = "README.md"
+classifiers = [
+    "Development Status :: 1 - Alpha",
+    "Topic :: Software Development :: Testing",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "License :: Other/Proprietary License",
+    "Topic :: Software Development :: Testing",
+    "Framework :: Robot Framework",
+    "Framework :: Robot Framework :: Library",
+    "Private :: Not intended to be uploaded to pypi",
+]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.12"
+robotframework = ">=6"
+
+[tool.poetry.group.dev.dependencies]
+robotframework-tidy = "^4.10.0"
+robotframework-robocop = "^5.0.3"
+pylint = "^3.0.3"
+black = "^24.2.0"
+isort = "^5.13.2"
+invoke = "^2.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pylint.'MESSAGES CONTROL']
+disable = ["logging-fstring-interpolation", "missing-class-docstring", "missing-function-docstring"]
+extension-pkg-whitelist = "pydantic"
+
+[tool.pylint.'FORMAT CHECKER']
+max-line-length=120
+
+[tool.pylint.'SIMILARITIES CHECKER']
+ignore-imports="yes"

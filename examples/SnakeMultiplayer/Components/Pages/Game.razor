@@ -1,0 +1,142 @@
+@page "/game"
+@inject HttpClient Http
+@inject IJSRuntime JS
+@using Microsoft.AspNetCore.Components.Web
+
+<h3>Multiplayer Snake Game</h3>
+
+@if (!hasJoined)
+{
+    <div>
+        <label>Enter your player ID:</label>
+        <input @bind="playerId" />
+        <button @onclick="JoinGame">Join Game</button>
+    </div>
+}
+else
+{
+    <p>Player: @playerId</p>
+}
+
+<!-- The canvas is made focusable (tabindex="0") so it can capture key events -->
+<canvas id="gameCanvas" tabindex="0" width="400" height="400" @onkeydown="HandleKeyDown"
+    style="border:1px solid black;"></canvas>
+
+@code {
+    private string playerId = string.Empty;
+    private bool hasJoined = false;
+    private System.Threading.Timer? timer;
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        Console.WriteLine("[CLIENT] OnAfterRender called. First render: " + firstRender);
+        if (firstRender)
+        {
+            // Set focus on the canvas to capture key events
+            JS.InvokeVoidAsync("setFocus", "gameCanvas");
+
+            // Start polling the game state every 200ms
+            timer = new System.Threading.Timer(async _ =>
+            {
+                await InvokeAsync(async () =>
+    { await FetchGameState(); });
+            }, null, 0, 200);
+        }
+        else
+        {
+            // Set focus on the canvas to capture key events
+            JS.InvokeVoidAsync("setFocus", "gameCanvas");
+        }
+    }
+
+    private async Task JoinGame()
+    {
+        Console.WriteLine("[CLIENT] JoinGame clicked. Current playerId: " + playerId);
+        if (!string.IsNullOrEmpty(playerId))
+        {
+            var response = await Http.PostAsJsonAsync("/api/game/player/join", playerId);
+            if (response.IsSuccessStatusCode)
+            {
+                hasJoined = true;
+                Console.WriteLine($"[CLIENT] Successfully joined as {playerId}");
+                StateHasChanged();
+            }
+            else
+            {
+                var errorMessage = await response.Content.ReadAsStringAsync();
+                Console.WriteLine($"[CLIENT] Join request failed. Status: {response.StatusCode}. Error: {errorMessage}");
+            }
+        }
+        else
+        {
+            Console.WriteLine("[CLIENT] No playerId entered.");
+        }
+    }
+
+    private async Task HandleKeyDown(KeyboardEventArgs e)
+    {
+        if (!hasJoined)
+        {
+            return;
+        }
+
+        Console.WriteLine($"[CLIENT] Key pressed: {e.Key}");
+
+        string newDirection = e.Key switch
+        {
+            "ArrowUp" => "Up",
+            "ArrowDown" => "Down",
+            "ArrowLeft" => "Left",
+            "ArrowRight" => "Right",
+            _ => string.Empty
+        };
+
+        if (!string.IsNullOrEmpty(newDirection))
+        {
+            await Http.PostAsJsonAsync($"/api/game/player/{playerId}/move", newDirection);
+        }
+    }
+
+    private async Task FetchGameState()
+    {
+        try
+        {
+            var game = await Http.GetFromJsonAsync<GameState>("/api/game");
+            await JS.InvokeVoidAsync("drawGame", "gameCanvas", game);
+            Console.WriteLine("[CLIENT] Fetched game state");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"[CLIENT] Error fetching game state: {ex.Message}");
+        }
+    }
+
+    // Classes representing the client-side game state (should match your backend models)
+    public class GameState
+    {
+        public Food? currentFood { get; set; }
+        public required List<PlayerState> players { get; set; }
+    }
+
+    public class Food
+    {
+        public required Position position { get; set; }
+    }
+
+    public class PlayerState
+    {
+        public required SnakeState snake { get; set; }
+    }
+
+    public class SnakeState
+    {
+        public required string color { get; set; }
+        public required List<Position> body { get; set; }
+    }
+
+    public class Position
+    {
+        public int x { get; set; }
+        public int y { get; set; }
+    }
+}

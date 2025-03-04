@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Horizon.XmlRpc.Client" Version="2.5.2" />
+      <PackageReference Include="Horizon.XmlRpc.Core" Version="2.5.2" />
+      <PackageReference Include="Horizon.XmlRpc.Server" Version="2.5.2" />
+      <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\RobotCore.Library\RobotCore.Library.csproj" />
+    </ItemGroup>
+
+</Project>
